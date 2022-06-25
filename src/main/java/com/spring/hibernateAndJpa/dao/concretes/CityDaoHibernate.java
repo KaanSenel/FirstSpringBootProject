@@ -54,4 +54,10 @@ public class CityDaoHibernate implements CityDao {
         Session session=this.entityManager.unwrap(Session.class);
         return session.get(City.class,id);
     }
+
+    @Override
+    public List<City> getAllTurkCities() {
+        Session session=this.entityManager.unwrap(Session.class);
+        return session.createQuery("from City where countryCode = 'TUR'",City.class).getResultList();
+    }
 }

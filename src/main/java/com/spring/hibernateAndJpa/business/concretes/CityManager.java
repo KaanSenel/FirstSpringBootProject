@@ -42,4 +42,9 @@ public class CityManager implements CityService {
     public City getById(int id) {
         return this.cityDao.getById(id);
     }
+
+    @Override
+    public List<City> getAllTurkCities() {
+        return this.cityDao.getAllTurkCities();
+    }
 }

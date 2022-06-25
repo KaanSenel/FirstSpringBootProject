@@ -40,4 +40,9 @@ public class CityController {
     public City getById(@PathVariable int id){
         return this.cityService.getById(id);
     }
+
+    @GetMapping("/getturkcities")
+    public List<City> getAllTurkCities(){
+        return this.cityService.getAllTurkCities();
+    }
 }
